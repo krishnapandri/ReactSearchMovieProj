@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import { API_KEY, GlobalContext } from "../contextStore/context";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { placeHolder } from "./Movie";
 
 
 
@@ -36,7 +37,7 @@ function  DetailedMovie(){
         <section className="movie-section">
         <div className="movie-card">
           <figure>
-            <img src={movie.Poster} alt="" />
+            <img src={movie.Poster ==="N/A" ? placeHolder : movie.Poster} alt="" />
           </figure>
           <div className="card-content">
             <p className="title">{movie.Title}</p>

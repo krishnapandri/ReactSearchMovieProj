@@ -1,10 +1,11 @@
 import { GlobalContext} from "../contextStore/context";
 import { NavLink } from "react-router-dom";
 
+export const placeHolder = "https://via.placeholder.com/200/200";
+
 const Movie =()=>{
     var {movies,isError,isLoading} = GlobalContext();
     /* const listTitle = movies.map(m=><li key={m.imdbID}>{m.Title}</li>); */
-    const placeHolder = "https://via.placeholder.com/200/200";
 
     return (
         <>
