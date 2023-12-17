@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 const Movie =()=>{
     var {movies,isError,isLoading} = GlobalContext();
     /* const listTitle = movies.map(m=><li key={m.imdbID}>{m.Title}</li>); */
+    const placeHolder = "https://via.placeholder.com/200/200";
 
     return (
         <>
@@ -16,7 +17,7 @@ const Movie =()=>{
                     <div className="card">
                         <div className="card-info">
                             <h2>{movie.Title.length > 15? movie.Title.substring(0,15)+'...' : movie.Title}</h2>
-                            <img src={movie['Poster']} alt={"Img"}/>
+                            <img src={movie['Poster']==="N/A"? placeHolder: movie['Poster']} alt={"Img"}/>
                         </div>
                     </div>
                 </NavLink>

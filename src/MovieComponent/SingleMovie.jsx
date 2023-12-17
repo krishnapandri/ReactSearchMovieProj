@@ -21,7 +21,7 @@ function  DetailedMovie(){
        .catch((err)=>{
         console.log(err);
        })
-    },[])
+    },[ID])
 
 
     if(isloading)

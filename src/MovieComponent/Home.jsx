@@ -4,7 +4,6 @@ import Movie from "./Movie";
 
 
 function Home(){
-   const context = GlobalContext();
     return (
         <>
             <Search/>

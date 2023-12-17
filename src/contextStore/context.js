@@ -49,7 +49,7 @@ function MovieProvider({children}){
                 const movieData = await getMovieData(Api_Key+query);
                 if(movieData.success){
                     setMovie(movieData.data);
-                    setIsError({...isError,show:false});
+                    setIsError(x=> ({...x,show:false}));
                     setIsLoading(false);
                 }
                 else {
